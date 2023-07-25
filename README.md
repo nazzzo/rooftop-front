@@ -12,7 +12,9 @@ NFT 구입 및 판매, 장바구니와 Sweep 슬라이더를 통한 대량 구�
 
 <br> <br>
 
-### [블록체인 관련 주요기능 소개]
+---
+
+### 📋 블록체인 관련 주요기능 소개
 
 <br>
 
@@ -74,7 +76,9 @@ NFT 구입 및 판매, 장바구니와 Sweep 슬라이더를 통한 대량 구�
 
 <br><br>
 
-[작업 환경]
+--- 
+
+### 🛠️ 작업 환경
 
 프론트엔드 : Next.js <br>
 백엔드 : Nest.js <br> 
@@ -83,4 +87,4 @@ NFT 구입 및 판매, 장바구니와 Sweep 슬라이더를 통한 대량 구�
 
 <br>
 
-API 문서: [https://nest-deploy-c764d61cc1b8.herokuapp.com/api](https://nest-deploy-c764d61cc1b8.herokuapp.com/api)
+- API 문서: [https://nest-deploy-c764d61cc1b8.herokuapp.com/api](https://nest-deploy-c764d61cc1b8.herokuapp.com/api)
