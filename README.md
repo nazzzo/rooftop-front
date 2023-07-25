@@ -1,34 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## ROOFTOP
 
-## Getting Started
+루프탑은 뭄바이 네트워크를 기반으로 동작하는 **NFT 마켓 플레이스**입니다. <br>
+컬렉션 생성과 NFT 민팅 과정에서 이미지 생성 AI(Eden AI에서 제공하는 이미지 생성 API)를 활용했으며, NFT 구입 및 판매, 장바구니와 Sweep 슬라이더를 통한 대량 구매, 경매 기능, 에어드롭 등 <br>
+오픈씨나 Blur와 같은 유명 NFT 마켓 플랫폼에서 사용되는 주요 기능들을 대부분 구현하고 있습니다.  <br>
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<br><br>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**[블록체인 관련 주요기능 소개]**
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- 컬렉션 생성: 런치패드를 통해 NFT 컬렉션을 생성합니다. 컬렉션의 설명란을 이미지 생성 AI의 프롬프트로 활용하고 있으며, 컬렉션 제작자는 로열티 지급 설정을 통해 판매 수수료를 나눠받을 수 있습니다
+- NFT 민팅: NFT의 이미지 등록은 컬렉션 제작에 사용한 프롬프트를 재활용해서 컬렉션에 일체감을 줄 수 있도록 구현했습니다. 모든 NFT는 ERC-721 표준을 따르며, 메타데이터는 피나타 API를 통해 IPFS에 저장되고 있습니다
+- 거래: 단일 품목에 대한 거래와 장바구니와를 통한 대량 거래가 가능하며 모든 거래 내역은 DB에 함께 저장됩니다. (이벤트 로그를 디코딩한 결과값입니다). 판매자는 마켓 수수료와 제작자 로열티를 뺀 값을 판매 대금으로 지급받습니다
+- 경매: 경매가 시작되면 입찰액이 컨트랙트에 보관되며, 최고입찰자가 바뀌면 기존의 입찰액은 환불됩니다. 판매자 입장에서는 미리 설정한 경매 종료시간 전까지는 경매취소를 할 수 있지만, 종료시간이 끝나면 반드시 경매종료를 통해 최고입찰자에게 NFT의 소유권을 이전시켜야 합니다. 입찰자 보호를 위해 마켓의 오너 계정에도 경매종료 권한을 부여하고 있습니다
+- 에어드롭 : 24시간마다 새로운 에어드롭 이벤트가 발생합니다. 이 기간 동안 드롭 이벤트 신청자들의 활동점수에 따라 고득점자에게 NFT를 선물합니다
+- 지갑 연결: 메타마스크와 코인베이스 월렛을 지원하고 있으며, 사이트 내의 거래 관련 기능들은 뭄바이 네트워크에 연결중일 때에만 활성화됩니다
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+코드 작업은 프론트엔드는 NextJs, 백엔드는 NestJs, 스타일은 테일윈드 CSS를 통해 진행되었습니다
+프로젝트 내에서 컨트랙트 작성, 프론트와 백엔드 전반적인 코드 작성과 리팩토링 및 배포를 담당했으며,
+배포 서비스는 아마존의 Amplify(프론트엔드)와 Heroku(백엔드)를 사용했습니다
 
-## Learn More
+<br>
 
-To learn more about Next.js, take a look at the following resources:
+프론트엔드 : NextJs <br>
+백엔드 : NestJs <br>
+스타일 : TailwindCss <br>
+API Doc : https://nest-deploy-c764d61cc1b8.herokuapp.com/api
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
