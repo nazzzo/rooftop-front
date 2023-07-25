@@ -1,14 +1,19 @@
 ## ROOFTOP
 
+
 ![rooftop-0](https://github.com/nazzzo/rooftop-front/assets/112994137/d1f2ef55-5774-4a70-bde3-c6e108a0e164)
 
 ![rooftop-1](https://github.com/nazzzo/rooftop-front/assets/112994137/fbb5f92c-7846-410f-ba8b-e84feedddb07)
 
 
-루프탑은 뭄바이 네트워크를 기반으로 동작하는 **NFT 마켓 플레이스**입니다. <br>
-컬렉션 생성과 NFT 민팅 과정에서 이미지 생성 AI를 활용했으며,  <br>
+https://roof-top.shop/
+
+
+- 루프탑은 뭄바이 네트워크를 기반으로 동작하는 **NFT 마켓 플레이스**입니다. <br>
+- 컬렉션 생성과 NFT 민팅 과정에서 이미지 생성 AI를 활용했으며  <br>
 NFT 구입 및 판매, 장바구니와 Sweep 슬라이더를 통한 대량 구매, 경매 기능, 에어드롭 등  <br>
-오픈씨나 Blur와 같은 유명 NFT 마켓 플랫폼에서 사용되는 주요 기능들을 대부분 구현하고 있습니다  <br>
+NFT 마켓 플랫폼에서 활용되는 다양한 기능들을 구현하고 있습니다.  <br>
+- 모든 페이지에서 다크모드와 반응형 웹을 지원합니다.
 
 <br> <br>
 
